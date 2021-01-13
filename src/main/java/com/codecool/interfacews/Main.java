@@ -4,10 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
-    static Main b1,b2;
-    static Main l1,l2;
-    static String[] birds = {"Sas","Fecske","Sirály","Ökörszem","Hárpia"};
-    static String[] ladyBirds = {"Hétpettyes","Ötpettyes","Piros","Sárga","Szeplőtlen"};
+    static String[] birds = {"Sas","Fecske","Sirály"};
+    static String[] ladyBirds = {"Hétpettyes","Ötpettyes","Piros"};
+    static Bird b1 = new Bird("Csuri",true);
+    static Ladybird l1 = new Ladybird("Sárga",false);
+    static Wolf w1 = new Wolf();
 
     public static void main(String[] args) {
         List<Animals> animals = new ArrayList<Animals>();
@@ -21,6 +22,13 @@ public class Main {
 
         allFly(animals);
         allFeed(animals);
+
+        UncleBen ub = new UncleBen();
+        ub.feedBirds( animals );
+
+        WildAnimalList<Wolf> wolfs = new WildAnimalList<Wolf>();
+        wolfs.add(w1);
+
     }
 
     public static void allFly(List<Animals> animals){

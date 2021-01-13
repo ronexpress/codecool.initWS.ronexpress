@@ -1,6 +1,6 @@
 package com.codecool.interfacews;
 
-public class Bird extends Animals implements Flying, Speeking, Feeding{
+public class Bird extends Animals implements Flying, Speeking, Feeding, WildAnimal{
     private String name;
     private boolean isFemale;
 
